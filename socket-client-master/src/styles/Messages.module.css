@@ -1,14 +1,17 @@
 .messages {
-  display: flex;
-  flex-direction: column;
-  row-gap: 20px;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    flex-wrap: wrap;
 }
 
 .message {
-  width: max-content;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   row-gap: 5px;
+  width: -webkit-max-content;
+  width: max-content;
   width: 100%;
 }
 
@@ -25,7 +28,12 @@
 }
 
 .user {
-  align-items: flex-start;
+  align-items: flex-end;
+}
+.user span{
+  display: flex;
+  height: 100%;
+  margin-right: 10px;
 }
 
 .user .text {
@@ -37,7 +45,13 @@
 }
 
 .me {
+  justify-content: flex-start;
   align-items: flex-end;
+  display: flex;
+  flex-direction: row-reverse;
+}
+.me span{
+  margin-left: 10px;
 }
 
 .me .text {

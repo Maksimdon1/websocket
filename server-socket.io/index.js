@@ -27,7 +27,7 @@ io.on("connection", (socket) => {
 
     const userMessage = isExist
       ? `${user.name}, here you go again`
-      : `Hey my love ${user.name}`;
+      : `Hey guy, ${user.name}`;
 
     socket.emit("message", {
       data: { user: { name: "Admin" }, message: userMessage },
